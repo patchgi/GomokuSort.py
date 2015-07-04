@@ -16,14 +16,13 @@ def put(_x,_y):
 	putStone=0
 	global turn
 	if turn:
-		print "yagi"
 		putStone=1
 	else:
 		putStone=2
-		cells[_x][_y]=putStone
+	cells[_x][_y]=putStone
 
 def puttable(_x,_y):
-	if 0>_x and _x<SCALE and 0>_y and _y>SCALE:
+	if 0>_x and _x>SCALE-1 and 0>_y and _y>SCALE-1:
 		return False
 	if cells[_x][_y]!=0:
 		return False
@@ -46,6 +45,7 @@ def drawBoard():
 
 if __name__=="__main__":
 	drawBoard()
+	
 	while (True):
 		if turn:
 			while (True):
