@@ -8,7 +8,7 @@ import time
 sys.stdout = codecs.getwriter('cp932')(sys.stdout)
 
 SCALE=5
-turn =True
+turn =False
 
 cells=[[0 for i in xrange(SCALE)]for j in xrange(SCALE)]
 
